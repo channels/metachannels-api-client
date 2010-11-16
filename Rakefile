@@ -5,12 +5,14 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "metachannels-api-client"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
-    gem.email = "apsoto@gmail.com"
-    gem.homepage = "http://github.com/apsoto/metachannels-api-client"
+    gem.summary = %Q{Gem to consume the metachannels.com api}
+    gem.description = %Q{A gem to consume the metachannels-api.  See http://support.metachannels.com/forums/202518-metachannels-api }
+    gem.email = "support@metachannels.com"
+    gem.homepage = "http://github.com/channels/metachannels-api-client"
     gem.authors = ["Alex Soto"]
-    gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
+    gem.add_dependency 'wrest'
+    #gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
+
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new

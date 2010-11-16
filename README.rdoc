@@ -1,6 +1,8 @@
 = metachannels-api-client
 
-Description goes here.
+A gem to consume the metachannels-api.
+
+See http://support.metachannels.com/forums/202518-metachannels-api
 
 == Note on Patches/Pull Requests
  
@@ -14,4 +16,4 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2010 Alex Soto. See LICENSE for details.
+Copyright (c) 2010 Metachannels.com. See LICENSE for details.
