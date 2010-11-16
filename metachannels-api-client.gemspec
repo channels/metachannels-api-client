@@ -19,11 +19,13 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
      ".gitignore",
+     ".rvmrc",
      "LICENSE",
      "README.rdoc",
      "Rakefile",
      "VERSION",
      "lib/metachannels-api-client.rb",
+     "metachannels-api-client.gemspec",
      "test/helper.rb"
   ]
   s.homepage = %q{http://github.com/channels/metachannels-api-client}
