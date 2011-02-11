@@ -19,11 +19,22 @@ class MetachannelsApi
   #     *perPage*
   #     *startPage*
   #     *order*
+  #     *types*
   def search(*args)
     raise ArgumentError.new('apikey not specified') if @api_key.blank?
     parameters = args.extract_options!
     
     uri()['/search'].get(parameters, {'Channels-Authorization' => @api_key}).deserialise
+  end
+
+  # Invoke the MetaChannels Shows API to retreive a single show
+  # *id*    The id of the metachannels show
+  # *args*  TBD
+  def show(id, *args)
+    raise ArgumentError.new('apikey not specified') if @api_key.blank?
+    parameters = args.extract_options!
+
+    uri()["/shows/#{id}"].get(parameters, {'Channels-Authorization' => @api_key}).deserialise
   end
 
   private
