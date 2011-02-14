@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Alex Soto"]
-  s.date = %q{2011-02-10}
+  s.date = %q{2011-02-14}
   s.description = %q{A gem to consume the metachannels-api.  See http://support.metachannels.com/forums/202518-metachannels-api }
   s.email = %q{support@metachannels.com}
   s.extra_rdoc_files = [
