@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{metachannels-api-client}
-  s.version = "0.2.1"
+  s.version = "0.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Alex Soto"]
-  s.date = %q{2010-11-16}
+  s.date = %q{2011-02-10}
   s.description = %q{A gem to consume the metachannels-api.  See http://support.metachannels.com/forums/202518-metachannels-api }
   s.email = %q{support@metachannels.com}
   s.extra_rdoc_files = [
@@ -20,6 +20,8 @@ Gem::Specification.new do |s|
     ".document",
      ".gitignore",
      ".rvmrc",
+     "Gemfile",
+     "Gemfile.lock",
      "LICENSE",
      "README.rdoc",
      "Rakefile",
