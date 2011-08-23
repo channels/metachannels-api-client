@@ -11,7 +11,7 @@ begin
     gem.email = "support@metachannels.com"
     gem.homepage = "http://github.com/channels/metachannels-api-client"
     gem.authors = ["Alex Soto"]
-    gem.add_dependency 'wrest', '0.1.2'
+    gem.add_dependency 'wrest', '~> 1.4.7'
     #gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
 
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
