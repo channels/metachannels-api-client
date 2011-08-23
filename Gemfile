@@ -1,7 +1,7 @@
 # vim:filetype=ruby
 source :rubyforge
 
-gem "wrest", '=0.1.2'
+gem "wrest", '~>1.4.7'
 gem "rake"
 
 group :development do
