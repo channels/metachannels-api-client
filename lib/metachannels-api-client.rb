@@ -23,18 +23,29 @@ class MetachannelsApi
   def search(*args)
     raise ArgumentError.new('apikey not specified') if @api_key.blank?
     parameters = args.extract_options!
-    
+
     uri()['/search'].get(parameters, {'Channels-Authorization' => @api_key}).deserialise
   end
 
   # Invoke the MetaChannels Shows API to retreive a single show
   # *id*    The id of the metachannels show
   # *args*  TBD
-  def show(id, *args)
+  def show(id, *args) #TODO rename as get_show, alias
     raise ArgumentError.new('apikey not specified') if @api_key.blank?
     parameters = args.extract_options!
 
     uri()["/shows/#{id}"].get(parameters, {'Channels-Authorization' => @api_key}).deserialise
+  end
+
+  def create_show(*args)
+    raise ArgumentError.new('apikey not specified') if @api_key.blank?
+    parameters = args.extract_options!
+    parameters[:api_key]=@api_key
+    parameters[:format]="json"      #make request json type
+    #TODO: parameters[:call_back_url]=...
+    #parameters: {:showLoc="YouTube", :youtubetype=>"YoutubePlaylist", :ytchannelorplaylist=>"abc", :email=>"xiaoming.lu.backup@gmail.com"}    debugger
+
+    uri['/shows'].post_form(parameters, {'Channels-Authorization' => @api_key})
   end
 
   private
@@ -42,4 +53,3 @@ class MetachannelsApi
     @end_point.to_uri()
   end
 end
-
