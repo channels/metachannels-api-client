@@ -17,3 +17,6 @@ See http://support.metachannels.com/forums/202518-metachannels-api
 == Copyright
 
 Copyright (c) 2010 Metachannels.com. See LICENSE for details.
+
+== History
+VERSION 0.4.0 Add create_show api to invoke MetaChannels Shows API to create a show 
