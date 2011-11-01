@@ -42,8 +42,7 @@ class MetachannelsApi
     parameters = args.extract_options!
     parameters[:api_key]=@api_key
     parameters[:format]="json"      #make request json type
-    #TODO: parameters[:call_back_url]=...
-    #parameters: {:showLoc="YouTube", :youtubetype=>"YoutubePlaylist", :ytchannelorplaylist=>"abc", :email=>"xiaoming.lu.backup@gmail.com"}    debugger
+    #parameters: {:showLoc="YouTube", :youtubetype=>"YoutubePlaylist", :ytchannelorplaylist=>"abc", :email=>"xiaoming.lu.backup@gmail.com", callbackurl=>"http://24.6.103.116:3001/notify_addshow"}
 
     uri['/shows'].post_form(parameters, {'Channels-Authorization' => @api_key})
   end
