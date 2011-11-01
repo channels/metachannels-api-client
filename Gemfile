@@ -5,7 +5,7 @@ gem "wrest", '~>1.4.7'
 gem "rake"
 
 group :development do
-  gem 'jeweler', '~>1.4.0'
+  gem 'jeweler', '~>1'
 end
 
 group :test do
