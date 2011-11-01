@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{metachannels-api-client}
-  s.version = "0.3.0"
+  s.version = "0.4.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Alex Soto"]
-  s.date = %q{2011-08-23}
+  s.date = %q{2011-11-01}
   s.description = %q{A gem to consume the metachannels-api.  See http://support.metachannels.com/forums/202518-metachannels-api }
   s.email = %q{support@metachannels.com}
   s.extra_rdoc_files = [
@@ -33,14 +33,13 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/channels/metachannels-api-client}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.7}
+  s.rubygems_version = %q{1.6.2}
   s.summary = %q{Gem to consume the metachannels.com api}
   s.test_files = [
     "test/helper.rb"
   ]
 
   if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
