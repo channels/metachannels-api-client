@@ -3,6 +3,7 @@ require 'wrest'
 Wrest::Components::Translators::CONTENT_TYPES["application/opensearchdescription+xml"] = Wrest::Components::Translators::Xml
 
 class MetachannelsApi
+  DEFAULT_API_ENDPOINT = "http://api.metachannels.com/api"
   attr_accessor :api_key
   attr_accessor :end_point
 

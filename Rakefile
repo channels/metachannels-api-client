@@ -23,8 +23,8 @@ end
 
 require 'rake/testtask'
 Rake::TestTask.new(:test) do |test|
-  test.libs << 'lib' << 'test'
-  test.pattern = 'test/**/test_*.rb'
+  test.libs << 'lib' << 'spec'
+  test.pattern = 'spec/**/*_spec.rb'
   test.verbose = true
 end
 
@@ -54,3 +54,8 @@ Rake::RDocTask.new do |rdoc|
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
+
+require 'rspec/core/rake_task'
+
+desc "Run all RSpec tests"
+RSpec::Core::RakeTask.new(:spec)
