@@ -27,6 +27,19 @@ class MetachannelsApi
     uri()['/search'].get(parameters, {'Channels-Authorization' => @api_key}).deserialise
   end
 
+  # args:
+  #     *username*
+  #     *perPage*
+  #     *startPage*
+  #     *format*
+  # Example: http://www.channels.com/api/shows/youtube?username=senatorfeinstein&format=xml&perPage=1&startPage=1
+  def search_youtube(*args)
+    raise ArgumentError.new('apikey not specified') if @api_key.blank?
+    parameters = args.extract_options!
+
+    uri()['/shows/youtube'].get(parameters, {'Channels-Authorization' => @api_key}).deserialise
+  end
+
   # Invoke the MetaChannels Shows API to retreive a single show
   # *id*    The id of the metachannels show
   # *args*  TBD
