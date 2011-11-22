@@ -3,12 +3,13 @@ require 'wrest'
 Wrest::Components::Translators::CONTENT_TYPES["application/opensearchdescription+xml"] = Wrest::Components::Translators::Xml
 
 class MetachannelsApi
+  DEFAULT_API_ENDPOINT = "http://api.metachannels.com/api" unless defined?(DEFAULT_API_ENDPOINT)
   attr_accessor :api_key
   attr_accessor :end_point
 
   def initialize(apikey = nil, end_point = nil)
     @api_key = apikey
-    @end_point = end_point || "http://api.metachannels.com/api"
+    @end_point = end_point || DEFAULT_API_ENDPOINT
   end
 
   # Invoke the Metachannels Search API
