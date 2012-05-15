@@ -51,6 +51,13 @@ class MetachannelsApi
     uri()["/shows/#{id}"].get(parameters, {'Channels-Authorization' => @api_key}).deserialise
   end
 
+  def get_video(id, *args)
+    raise ArgumentError.new('apikey not specified') if @api_key.blank?
+    parameters = args.extract_options!
+    parameters[:format]="json"      #make request json type
+    uri()["/videos/#{id}"].get(parameters, {'Channels-Authorization' => @api_key}).deserialise
+  end
+
   # Invoke the MetaChannels Shows API to create a show
   # args  {:showLoc="YouTube", :youtubetype=>"YoutubePlaylist", :ytchannelorplaylist=>"abc", :email=>"xiaoming.lu.backup@gmail.com", callbackurl=>"http://24.6.103.116:3001/notify_addshow"}
   def create_show(*args)
