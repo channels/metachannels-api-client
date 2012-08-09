@@ -69,6 +69,24 @@ class MetachannelsApi
     uri['/shows'].post_form(parameters, {'Channels-Authorization' => @api_key})
   end
 
+  # Retreive the set of all Wurl Packages
+  # GET /api/wurl_packages
+  def wurl_packages(*args)
+    raise ArgumentError.new('apikey not specified') if @api_key.blank?
+    parameters = args.extract_options!
+
+    uri()['/wurl_packages'].get(parameters, {'Channels-Authorization' => @api_key}).deserialise
+  end
+
+  # Retrieve a single Wurl Package
+  # GET /api/wurl_package
+  def get_wurl_package(slug, *args)
+    raise ArgumentError.new('apikey not specified') if @api_key.blank?
+    parameters = args.extract_options!
+
+    uri()["/wurl_packages/#{slug}"].get(parameters, {'Channels-Authorization' => @api_key}).deserialise
+  end
+
   private
   def uri
     @end_point.to_uri()
