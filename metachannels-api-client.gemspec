@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{metachannels-api-client}
-  s.version = "0.5.0"
+  s.name = "metachannels-api-client"
+  s.version = "0.6.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Alex Soto"]
-  s.date = %q{2011-11-21}
-  s.description = %q{A gem to consume the metachannels-api.  See http://support.metachannels.com/forums/202518-metachannels-api }
-  s.email = %q{support@metachannels.com}
+  s.date = "2012-08-10"
+  s.description = "A gem to consume the metachannels-api.  See http://support.metachannels.com/forums/202518-metachannels-api "
+  s.email = "support@metachannels.com"
   s.extra_rdoc_files = [
     "LICENSE",
     "README.rdoc"
@@ -31,10 +31,10 @@ Gem::Specification.new do |s|
     "spec/spec_helper.rb",
     "test/helper.rb"
   ]
-  s.homepage = %q{http://github.com/channels/metachannels-api-client}
+  s.homepage = "http://github.com/channels/metachannels-api-client"
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.6.2}
-  s.summary = %q{Gem to consume the metachannels.com api}
+  s.rubygems_version = "1.8.15"
+  s.summary = "Gem to consume the metachannels.com api"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
