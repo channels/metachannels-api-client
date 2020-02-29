@@ -12,7 +12,7 @@ GEM
       git (>= 1.2.5)
       rake
     multi_json (1.0.3)
-    rake (0.8.7)
+    rake (12.3.3)
     rspec (2.7.0)
       rspec-core (~> 2.7.0)
       rspec-expectations (~> 2.7.0)
